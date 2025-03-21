@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./adminHeader')%>
+    <center>
+        <h3 style="color: red;">Welcome <%= email %></h3> 
+        <h2>User List</h2>
+        <h3 style="color: blue;"><%- msg %></h3>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th rowspan="2">S.No</th>
+                    <th rowspan="2">Username</th>
+                    <th rowspan="2">Email</th>
+                    <th rowspan="2">password</th>
+                    <th rowspan="2">Address</th>
+                    <th colspan="2">Action</th>
+                </tr>
+                <tr>
+                    <th><a href="">Update</a></th>
+                    <th><a href="">Delate</a></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <%userList.forEach((user,index)=>{%>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.password %></td>
+                    <td><%= user.address %></td>
+                    <th><a href="/admin/update/<%=user.email%>">Update</a></th>
+                    <th><a href="/admin/delete/<%=user.email%>">Delete</a></th>
+                </tr>
+              <% })%>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

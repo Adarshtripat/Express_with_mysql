@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 30px;
+            width: 200px;
+            margin: 3px;
+        }
+        #btn{
+            background-color: red;
+            color: white;
+        }
+        #rst{
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <center><h2>Example of Express with mysql</h2></center>
+    <hr>
+    <center>    
+    <a href="/">Home</a>
+    <a href="/user/register">Register</a>
+    <a href="/user/login">Login</a>
+    </center>
+    <hr>
+    
+    <center>
+        <h3>Logine Page</h3>
+        <form action="/user/login" method="post">
+            <table>
+                <tbody>
+                    
+                    <tr>
+                        <td>
+                            Email:<br>
+                            <input type="text" placeholder="Enter Email" name="email">
+                        </td>
+                    </tr>
+                    <tr>  
+                        <td>
+                            Password:<br>
+                            <input type="password" placeholder="Enter password" name="password">
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            <input type="submit" id="btn" value="Login">
+                            <br>
+                            <input type="reset" id="rst" value="Reset">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <span style="color: green;"><%= msg %></span>
+    </center>
+</body>
+</html>
