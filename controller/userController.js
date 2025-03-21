@@ -97,26 +97,3 @@ export const UserLogoutController = (request,response)=>{
     response.redirect("/");
     }
 
-
-// //same kam kuch is trhe query and query value ko ham alag file me likh sakte hy
-// import { queries } from "../model/query.js";
-// import { insertvalues } from "../model/queryvalues.js";
-// export const userRegistration = (request,response)=>{     
-//     console.log(request.body);
-   
-//     con.query(queries.insertquery,insertvalues(request),(error,result)=>{
-//         if(error){
-//             console.log("Error occured :",error);
-//             console.log("Error while Registration");
-//             response.render("register",{msg:"error while Registration successfully"})
-//         }
-//          else{
-//             console.log("Result",result);
-//             console.log("Registration successfully");
-//             response.render("login",{msg:"Registration successfull"})
-//          }   
-//     })
-// }
-// export const userlogin = (request,response)=>{
-
-// }
